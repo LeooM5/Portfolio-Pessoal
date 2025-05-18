@@ -1,0 +1,118 @@
+/* FONTES */
+
+@import url('https://fonts.googleapis.com/css2?family=Copse&family=Edu+NSW+ACT+Foundation:wght@400..700&family=ZCOOL+XiaoWei&display=swap');
+
+/* 
+    font-family: "ZCOOL XiaoWei", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+
+    font-family: "Copse", serif;
+    font-weight: 400;
+    font-style: normal;
+
+    font-family: "Edu NSW ACT Foundation", cursive;
+    font-optical-sizing: auto;
+    font-weight: <weight>;
+    font-style: normal;
+*/
+
+/* GERAL */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --color-prim: white;
+    --color-sec: #7fd4f0d5;
+}
+
+/* CABEÇALHO */
+
+header {
+    display: flex;
+    align-items: center;
+    height: 5em;
+    width: 100dvw;
+    background-color: black;
+    justify-content: center;
+}
+
+header nav img {
+    width: 3em;
+    height: auto;
+    border-radius: 50%;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100dvw;
+    height: 5em;
+
+    && .logo {
+        width: 11dvw;
+    }
+
+    && .links {
+        width: 33.33dvw;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        margin: 0 7em;
+    }
+
+    && .contatos {
+        width: 12dvw;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+}
+
+.links a {
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+    font-family: "Edu NSW ACT Foundation", cursive;
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+.contatos i {
+    color: var(--color-prim);
+    font-size: 2em;
+}
+
+header a,
+header img {
+    transition: .3s ease;
+}
+
+.links a:hover,
+.contatos a:hover,
+header img:hover {
+    transform: scale(1.1);
+}
+
+.links a::after,
+.contatos a::after {
+    content: "";
+    position: absolute;
+    background-color: var(--color-sec);
+    height: 2px;
+    width: 100%;
+    left: 0;
+    bottom: -10px;
+    transition: .5s ease;
+    transform: scaleX(0);
+}
+
+.links a:hover::after,
+.contatos a:hover::after {
+    transform: scaleX(1);
+}
