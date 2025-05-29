@@ -1,4 +1,12 @@
 /* FONTES */
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+/*   
+  font-family: "Nunito", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal; 
+*/
 
 @import url('https://fonts.googleapis.com/css2?family=Copse&family=Edu+NSW+ACT+Foundation:wght@400..700&family=ZCOOL+XiaoWei&display=swap');
 
@@ -61,44 +69,62 @@ html {
 
 /* CABEÇALHO */
 
+.contatos {
+    z-index: 10;
+    border-radius: 1.5em;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    background-color: #193741;
+    height: 40dvh;
+    width: 4.2dvw;
+    position: fixed;
+    right: 0;
+    top: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    transform: translateY(-50%);
+}
+
 header {
     position: fixed;
     display: flex;
     align-items: center;
     height: 5em;
-    width: 100%;
+    width: 100dvw;
     background-color: #000000a1;
     justify-content: center;
     z-index: 1000;
 }
 
 header nav img {
-    width: 3em;
-    height: auto;
+    width: 100%;
+    height: 100%;
     border-radius: 50%;
+}
+
+.logo a {
+    width: 100%;
+    height: 100%;
 }
 
 nav {
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
-    width: 100dvw;
+    justify-content: space-between;
+    width: 90dvw;
     height: 5em;
 
-    && .logo {
-        width: 11dvw;
-    }
-
-    && .links {
-        width: 33.33dvw;
+    & .logo {
+        width: 3dvw;
+        height: 6dvh;
         display: flex;
-        align-items: center;
-        justify-content: space-around;
-        margin: 0 7em;
+        justify-content: center;
     }
 
-    && .contatos {
-        width: 12dvw;
+    & .links {
+        width: 30dvw;
         display: flex;
         align-items: center;
         justify-content: space-around;
@@ -110,30 +136,35 @@ nav {
     text-decoration: none;
     color: white;
     text-transform: uppercase;
-    font-family: "Cagliostro", sans-serif;
+    font-family: "Nunito", sans-serif;
     font-weight: bold;
     font-size: 1.2em;
 }
 
-.contatos i {
+.contatos a {
     color: var(--color-prim);
-    font-size: 2em;
+    font-size: 1.8em;
+    padding: 1rem;
+    border-radius: 16px;
 }
 
 .links a,
 .contatos a,
-.logo img {
+.logo a {
     transition: .3s ease;
 }
 
 .links a:hover,
 .contatos a:hover,
-header img:hover {
+.logo a:hover {
     transform: scale(.9);
 }
 
-.links a::after,
-.contatos a::after {
+.contatos a:hover{
+    background-color: #7fd4f0;
+}
+
+.links a::after {
     content: "";
     position: absolute;
     background-color: var(--color-sec);
@@ -145,8 +176,7 @@ header img:hover {
     transition: .3s ease;
 }
 
-.links a:hover::after,
-.contatos a:hover::after {
+.links a:hover::after {
     transform: scaleX(1);
 }
 
@@ -213,10 +243,10 @@ section {
 
 #Eu .contatos2 i {
     border: 1px solid #7fd4f0;
-    color: #77cae9b6;
+    color: #0277a2;
     border-radius: 50%;
     padding: .5em;
-    font-size: 2em;
+    font-size: 1.6em;
 }
 
 .contatos2 {
@@ -225,7 +255,7 @@ section {
     align-items: center;
     justify-content: space-around;
     width: 25em;
-    height: 10em;
+    height: 5em;
 }
 
 #Eu button:hover,
@@ -246,11 +276,11 @@ section {
 }
 
 .containerInfo h1 {
-    font-size: 4.5em;
+    font-size: 4em;
     overflow: hidden;
     border-right: solid 3px var(--color-sec);
     transition: .5s ease;
-    max-width: 864px;
+    max-width: 834px;
     white-space: nowrap;
     animation: cursor .4s step-end infinite alternate,
         digitar 7s steps(19) infinite alternate;
@@ -341,8 +371,8 @@ body section img {
     background-image: url(./IMG/wave.png);
     position: absolute;
     width: 100dvw;
-    height: 5em;
-    background-size: 52dvw 16dvh;
+    height: 7em;
+    background-size: 43em 8em;
 }
 
 .wave {
@@ -372,6 +402,14 @@ body section img {
     }
 }
 
+/* DIV HABILIDADES */
+
+#Habilidades {
+    height: 100dvh;
+    background-color: black;
+}
+
+
 /* KEYFRAMES */
 
 @keyframes animar {
@@ -390,7 +428,7 @@ body section img {
     }
 
     100% {
-        background-position-x: 52dvw;
+        background-position-x: 43em;
     }
 }
 
@@ -400,7 +438,7 @@ body section img {
     }
 
     100% {
-        background-position-x: -52dvw;
+        background-position-x: -43em;
     }
 }
 
@@ -428,15 +466,15 @@ body section img {
     }
 
     40% {
-        width: 45dvw;
+        width: 39.5dvw;
     }
 
     55% {
-        width: 45dvw;
+        width: 39.5dvw;
     }
 
     80% {
-        width: 45dvw;
+        width: 39.5dvw;
     }
 
     90% {
