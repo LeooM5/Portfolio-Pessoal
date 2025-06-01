@@ -1,0 +1,20 @@
+{
+  "name": "sass",
+  "version": "1.0.0",
+  "main": "app.js",
+  "scripts": {
+    "compilar": "sass estilo.scss ./CSS/estilo.css",
+    "observar": "sass --watch estilo.scss ./CSS/estilo.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LeooM5/Portfolio-Pessoal.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LeooM5/Portfolio-Pessoal/issues"
+  },
+  "homepage": "https://github.com/LeooM5/Portfolio-Pessoal#readme",
+  "description": ""
+}

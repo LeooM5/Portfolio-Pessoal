@@ -1,0 +1,7 @@
+@mixin botao-e-icones-do-contatos2 {
+    color: white;
+    background: linear-gradient(to right, $color-sec 100%, transparent 100%);
+    background-size: 0% 100%;
+    background-repeat: no-repeat;
+    transition: .5s ease;
+}

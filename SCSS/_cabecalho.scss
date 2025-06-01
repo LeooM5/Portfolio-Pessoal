@@ -1,0 +1,97 @@
+@import "variaveis";
+
+.contatos {
+    z-index: 10;
+    border-radius: 1.5em;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    background-color: #193741;
+    height: 22em;
+    width: 5em;
+    position: fixed;
+    right: 0;
+    top: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    transform: translateY(-50%);
+}
+
+header {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    height: 5em;
+    width: 100dvw;
+    background-color: #000000a1;
+    justify-content: center;
+    z-index: 1000;
+
+    & nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 90dvw;
+        height: 5em;
+
+        & img {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+        }
+
+        & .logo {
+            width: 3dvw;
+            height: 6dvh;
+            display: flex;
+            justify-content: center;
+        }
+
+        & .links {
+            width: 30dvw;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+        }
+    }
+}
+
+.logo a {
+    width: 100%;
+    height: 100%;
+}
+
+.links a {
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+    font-family: "Nunito", sans-serif;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+.contatos a {
+    color: $color-prim;
+    border-radius: 16px;
+}
+
+.contatos a:hover {
+    background-color: #7fd4f0;
+}
+
+.links a::after {
+    content: "";
+    position: absolute;
+    background-color: $color-sec;
+    height: .1em;
+    width: 100%;
+    left: 0;
+    bottom: -5px;
+    transform: scaleX(0);
+    transition: .3s ease;
+}
+
+.links a:hover::after {
+    transform: scaleX(1);
+}

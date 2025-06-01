@@ -1,0 +1,45 @@
+.ondas {
+    width: 100dvw;
+    height: 13dvh;
+    display: flex;
+    align-items: flex-end;
+    background: transparent;
+    position: absolute;
+    top: 87dvh;
+}
+
+.ondas .wave {
+    filter: invert(1);
+    background-image: url(../IMG/wave.png);
+    position: absolute;
+    width: 100dvw;
+    height: 7em;
+    background-size: 43em 8em;
+}
+
+.wave {
+    &.wave1 {
+        z-index: 5;
+        animation: onda1 5s linear infinite;
+    }
+
+    &.wave2 {
+        z-index: 4;
+        opacity: .6;
+        animation: onda2 6s linear infinite;
+    }
+
+    &.wave3 {
+        z-index: 3;
+        opacity: .6;
+        animation-delay: 3s;
+        animation: onda1 8s linear infinite;
+    }
+
+    &.wave4 {
+        z-index: 2;
+        opacity: .4;
+        animation-delay: 3s;
+        animation: onda2 4s linear infinite;
+    }
+}

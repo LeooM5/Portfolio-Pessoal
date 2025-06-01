@@ -1,0 +1,53 @@
+.container1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100dvw;
+    height: 100dvh;
+    background: radial-gradient(at top, $color-sec 28%, black);
+    background-size: 100% 150%;
+
+    & h1 {
+        font-family: "WDXL Lubrifont TC", sans-serif;
+        font-size: 6em;
+        height: 1em;
+        text-align: center;
+        text-transform: uppercase;
+        overflow: hidden;
+        border-right: 5px solid $color-prim;
+        animation: cursor .4s step-end infinite alternate,
+            digitando 7s steps(18) infinite alternate;
+        transition: .5s ease;
+        white-space: nowrap;
+
+        & span {
+            color: #06455a;
+        }
+    }
+}
+
+.bolhas {
+    position: absolute;
+    display: flex;
+
+    & span {
+        z-index: -1;
+        border-radius: 50%;
+        width: 2em;
+        height: 2em;
+        margin: 0 .2em;
+        background: #ffffffa9;
+        box-shadow: 0 0 0 .6em #b4b4b4d7,
+            0 5px 10px #7886f06e,
+            0 2px .1px #7886f06e;
+        animation: animar calc(28s /var(--i)) linear infinite;
+
+        &:nth-of-type(even) {
+            background: #85cec8b9;
+            box-shadow: 0 0 0 10px #96f6fd7a,
+                0 0 10px #b1d1fa56,
+                0 2px .1px #b1d1fa57;
+        }
+    }
+}

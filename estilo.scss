@@ -1,0 +1,91 @@
+@import "./SCSS/fontes";
+@import "./SCSS/extends";
+@import "./SCSS/variaveis";
+@import "./SCSS/mixins";
+
+
+/* GERAL */
+
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+i {
+    font-size: 2.5em;
+    margin-top: .4em;
+    padding: .2em .5em;
+}
+
+/* CABEÇALHO DO SITE */
+
+.links a {
+    @extend %links-contatos-logo-a;
+
+    &:hover {
+        transform: scale(.9);
+    }
+}
+
+.contatos a {
+    @extend %links-contatos-logo-a;
+
+    &:hover {
+        transform: scale(.9);
+    }
+}
+
+.logo a {
+    @extend %links-contatos-logo-a;
+
+    &:hover {
+        transform: scale(.9);
+    }
+}
+
+@import "./SCSS/cabecalho";
+
+/* TOPO DO SITE (1° a aparecer)*/
+
+@import "./SCSS/topo-do-site";
+
+@import "./SCSS/animacoes";
+
+/* ONDAS (2° a aparecer)*/
+
+@import "./SCSS/ondas";
+
+/* SOBRE MIM (3° a aparecer)*/
+
+#Eu button {
+    @include botao-e-icones-do-contatos2;
+
+    &:hover {
+        background-size: 100% 100%;
+    }
+}
+
+#Eu .contatos2 i {
+    @include botao-e-icones-do-contatos2;
+
+    font-size: 1.8em;
+    border: 1px solid #7fd4f0;
+    color: #0277a2;
+    padding-top: .7em;
+    border-radius: 50%;
+
+    &:hover {
+        background-size: 100% 100%;
+    }
+}
+
+@import "./SCSS/sobreMim";
+
+/* HABILIDADES (4° a aparecer)*/
+
+@import "./SCSS/habilidades";

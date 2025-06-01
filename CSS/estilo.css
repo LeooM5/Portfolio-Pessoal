@@ -1,0 +1,473 @@
+@charset "UTF-8";
+/* FONTES */
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap");
+/*   
+  font-family: "Nunito", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal; 
+*/
+@import url("https://fonts.googleapis.com/css2?family=Copse&family=Edu+NSW+ACT+Foundation:wght@400..700&family=ZCOOL+XiaoWei&display=swap");
+/* 
+
+    font-family: "ZCOOL XiaoWei", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+
+    font-family: "Copse", serif;
+    font-weight: 400;
+    font-style: normal;
+
+    font-family: "Edu NSW ACT Foundation", cursive;
+    font-optical-sizing: auto;
+    font-weight: <weight>;
+    font-style: normal;
+
+*/
+@import url("https://fonts.googleapis.com/css2?family=Cagliostro&display=swap");
+/* 
+
+  font-family: "Cagliostro", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+
+*/
+@import url("https://fonts.googleapis.com/css2?family=Cutive+Mono&family=WDXL+Lubrifont+TC&display=swap");
+/* 
+  font-family: "Cutive Mono", monospace;
+  font-weight: 400;
+  font-style: normal;
+
+  font-family: "WDXL Lubrifont TC", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+
+*/
+.logo a, .contatos a, .links a {
+  transition: 0.3s ease;
+}
+
+/* GERAL */
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+i {
+  font-size: 2.5em;
+  margin-top: 0.4em;
+  padding: 0.2em 0.5em;
+}
+
+/* CABEÇALHO DO SITE */
+.links a:hover {
+  transform: scale(0.9);
+}
+
+.contatos a:hover {
+  transform: scale(0.9);
+}
+
+.logo a:hover {
+  transform: scale(0.9);
+}
+
+.contatos {
+  z-index: 10;
+  border-radius: 1.5em;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  background-color: #193741;
+  height: 22em;
+  width: 5em;
+  position: fixed;
+  right: 0;
+  top: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  transform: translateY(-50%);
+}
+
+header {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  height: 5em;
+  width: 100dvw;
+  background-color: rgba(0, 0, 0, 0.631372549);
+  justify-content: center;
+  z-index: 1000;
+}
+header nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 90dvw;
+  height: 5em;
+}
+header nav img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+header nav .logo {
+  width: 3dvw;
+  height: 6dvh;
+  display: flex;
+  justify-content: center;
+}
+header nav .links {
+  width: 30dvw;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.logo a {
+  width: 100%;
+  height: 100%;
+}
+
+.links a {
+  text-decoration: none;
+  color: white;
+  text-transform: uppercase;
+  font-family: "Nunito", sans-serif;
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+.contatos a {
+  color: white;
+  border-radius: 16px;
+}
+
+.contatos a:hover {
+  background-color: #7fd4f0;
+}
+
+.links a::after {
+  content: "";
+  position: absolute;
+  background-color: rgba(127, 212, 240, 0.8352941176);
+  height: 0.1em;
+  width: 100%;
+  left: 0;
+  bottom: -5px;
+  transform: scaleX(0);
+  transition: 0.3s ease;
+}
+
+.links a:hover::after {
+  transform: scaleX(1);
+}
+
+/* TOPO DO SITE (1° a aparecer)*/
+.container1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100dvw;
+  height: 100dvh;
+  background: radial-gradient(at top, rgba(127, 212, 240, 0.8352941176) 28%, black);
+  background-size: 100% 150%;
+}
+.container1 h1 {
+  font-family: "WDXL Lubrifont TC", sans-serif;
+  font-size: 6em;
+  height: 1em;
+  text-align: center;
+  text-transform: uppercase;
+  overflow: hidden;
+  border-right: 5px solid white;
+  animation: cursor 0.4s step-end infinite alternate, digitando 7s steps(18) infinite alternate;
+  transition: 0.5s ease;
+  white-space: nowrap;
+}
+.container1 h1 span {
+  color: #06455a;
+}
+
+.bolhas {
+  position: absolute;
+  display: flex;
+}
+.bolhas span {
+  z-index: -1;
+  border-radius: 50%;
+  width: 2em;
+  height: 2em;
+  margin: 0 0.2em;
+  background: rgba(255, 255, 255, 0.662745098);
+  box-shadow: 0 0 0 0.6em rgba(180, 180, 180, 0.8431372549), 0 5px 10px rgba(120, 134, 240, 0.431372549), 0 2px 0.1px rgba(120, 134, 240, 0.431372549);
+  animation: animar calc(28s / var(--i)) linear infinite;
+}
+.bolhas span:nth-of-type(even) {
+  background: rgba(133, 206, 200, 0.7254901961);
+  box-shadow: 0 0 0 10px rgba(150, 246, 253, 0.4784313725), 0 0 10px rgba(177, 209, 250, 0.337254902), 0 2px 0.1px rgba(177, 209, 250, 0.3411764706);
+}
+
+@keyframes animar {
+  0% {
+    transform: translateY(100dvh) scale(0.5);
+  }
+  100% {
+    transform: translateY(-8dvh) scale(1);
+  }
+}
+@keyframes onda1 {
+  0% {
+    background-position-x: 0;
+  }
+  100% {
+    background-position-x: 43em;
+  }
+}
+@keyframes onda2 {
+  0% {
+    background-position-x: 0;
+  }
+  100% {
+    background-position-x: -43em;
+  }
+}
+@keyframes fundoanimado {
+  0% {
+    background-position: 0 50%;
+  }
+  50% {
+    background-position: 100% 100%;
+  }
+  100% {
+    background-position: 0 50%;
+  }
+}
+@keyframes digitar {
+  0% {
+    width: 2em;
+  }
+  30% {
+    width: 2em;
+  }
+  40% {
+    width: 11.5em;
+  }
+  50% {
+    width: 11.5em;
+  }
+  80% {
+    width: 11.5em;
+  }
+  90% {
+    width: 2em;
+  }
+  100% {
+    width: 2em;
+  }
+}
+@keyframes cursor {
+  50% {
+    border-color: transparent;
+  }
+}
+@keyframes digitando {
+  0% {
+    width: 0;
+  }
+  20% {
+    width: 0;
+  }
+  30% {
+    width: 15em;
+  }
+  40% {
+    width: 15em;
+  }
+  50% {
+    width: 15em;
+  }
+  60% {
+    width: 15em;
+  }
+  70% {
+    width: 15em;
+  }
+  80% {
+    width: 15em;
+  }
+  90% {
+    width: 0;
+  }
+  100% {
+    width: 0;
+  }
+}
+/* ONDAS (2° a aparecer)*/
+.ondas {
+  width: 100dvw;
+  height: 13dvh;
+  display: flex;
+  align-items: flex-end;
+  background: transparent;
+  position: absolute;
+  top: 87dvh;
+}
+
+.ondas .wave {
+  filter: invert(1);
+  background-image: url(../IMG/wave.png);
+  position: absolute;
+  width: 100dvw;
+  height: 7em;
+  background-size: 43em 8em;
+}
+
+.wave.wave1 {
+  z-index: 5;
+  animation: onda1 5s linear infinite;
+}
+.wave.wave2 {
+  z-index: 4;
+  opacity: 0.6;
+  animation: onda2 6s linear infinite;
+}
+.wave.wave3 {
+  z-index: 3;
+  opacity: 0.6;
+  animation-delay: 3s;
+  animation: onda1 8s linear infinite;
+}
+.wave.wave4 {
+  z-index: 2;
+  opacity: 0.4;
+  animation-delay: 3s;
+  animation: onda2 4s linear infinite;
+}
+
+/* SOBRE MIM (3° a aparecer)*/
+#Eu button {
+  color: white;
+  background: linear-gradient(to right, rgba(127, 212, 240, 0.8352941176) 100%, transparent 100%);
+  background-size: 0% 100%;
+  background-repeat: no-repeat;
+  transition: 0.5s ease;
+}
+#Eu button:hover {
+  background-size: 100% 100%;
+}
+
+#Eu .contatos2 i {
+  color: white;
+  background: linear-gradient(to right, rgba(127, 212, 240, 0.8352941176) 100%, transparent 100%);
+  background-size: 0% 100%;
+  background-repeat: no-repeat;
+  transition: 0.5s ease;
+  font-size: 1.8em;
+  border: 1px solid #7fd4f0;
+  color: #0277a2;
+  padding-top: 0.7em;
+  border-radius: 50%;
+}
+#Eu .contatos2 i:hover {
+  background-size: 100% 100%;
+}
+
+body {
+  min-height: 100dvh;
+  overflow-x: hidden;
+}
+
+section {
+  height: 100dvh;
+  width: 100dvw;
+  background: black;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.ImagemEu {
+  width: 40dvw;
+  height: 80dvh;
+}
+
+#Eu {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  height: 70dvh;
+  width: 50dvw;
+  justify-content: space-evenly;
+  margin-left: 5em;
+}
+#Eu button {
+  width: 13em;
+  height: 4em;
+  align-self: center;
+  border: 2px solid rgba(127, 212, 240, 0.8352941176);
+  border-radius: 0.5em;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  text-transform: uppercase;
+  padding: 0 1em;
+  cursor: pointer;
+}
+#Eu .contatos {
+  align-self: center;
+  display: flex;
+  justify-content: space-between;
+  width: 10em;
+}
+
+.containerInfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  font-family: "Copse", serif;
+  height: 30dvh;
+}
+.containerInfo p {
+  text-align: justify;
+}
+.containerInfo h1 {
+  font-size: 3em;
+  overflow: hidden;
+  border-right: solid 3px rgba(127, 212, 240, 0.8352941176);
+  transition: 0.5s ease;
+  max-width: 11.5em;
+  max-height: 1.5em;
+  white-space: nowrap;
+  animation: cursor 0.4s step-end infinite alternate, digitar 7s steps(19) infinite alternate;
+}
+.containerInfo h2 {
+  font-size: 2.5em;
+  color: rgba(127, 212, 240, 0.8352941176);
+}
+
+body section img {
+  height: auto;
+  width: 100dvw;
+  z-index: -1;
+}
+
+.contatos2 {
+  display: flex;
+  justify-content: space-around;
+  width: 15em;
+  align-self: center;
+}
+
+/* HABILIDADES (4° a aparecer)*/
+#Habilidades {
+  height: 100dvh;
+  background-color: black;
+}
+
+/*# sourceMappingURL=estilo.css.map */
