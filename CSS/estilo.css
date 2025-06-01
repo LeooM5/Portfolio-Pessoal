@@ -310,6 +310,29 @@ header nav .links {
     width: 0;
   }
 }
+@keyframes subirEDescer {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-1em);
+  }
+}
+@keyframes moverOnda1 {
+  from {
+    transform: translateX(-300px);
+  }
+}
+@keyframes moverOnda2 {
+  from {
+    transform: translateX(250px);
+  }
+}
+@keyframes moverOnda3 {
+  from {
+    transform: translateX(-190px);
+  }
+}
 /* ONDAS (2° a aparecer)*/
 .ondas {
   width: 100dvw;
@@ -394,9 +417,12 @@ section {
   justify-content: space-evenly;
 }
 
-.ImagemEu {
-  width: 40dvw;
-  height: 80dvh;
+.ImagemEu img {
+  width: 35em;
+  height: auto;
+  border-radius: 50%;
+  box-shadow: 0 0 2em rgba(127, 212, 240, 0.8352941176);
+  animation: subirEDescer 3s ease infinite alternate;
 }
 
 #Eu {
@@ -466,8 +492,46 @@ body section img {
 
 /* HABILIDADES (4° a aparecer)*/
 #Habilidades {
-  height: 100dvh;
+  height: 120dvh;
   background-color: black;
+}
+
+.Habilidades {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 70dvh;
+  width: 100dvw;
+}
+.Habilidades h1 {
+  color: #7fd4f0;
+  font-size: 2.5em;
+  text-align: center;
+}
+
+.ondaAzul {
+  width: 100dvw;
+  height: 14dvh;
+  display: flex;
+  align-items: flex-end;
+  background: transparent;
+}
+
+.waves2 {
+  position: absolute;
+  left: 0;
+  right: 0;
+}
+.waves2 .wave-1 {
+  animation: moverOnda1 3.5s ease-in-out infinite alternate;
+}
+.waves2 .wave-2 {
+  animation-delay: 1s;
+  animation: moverOnda2 4s ease-in-out infinite alternate;
+}
+.waves2 .wave-3 {
+  animation-delay: 3s;
+  animation: moverOnda3 4s ease-in-out infinite alternate;
 }
 
 /*# sourceMappingURL=estilo.css.map */
