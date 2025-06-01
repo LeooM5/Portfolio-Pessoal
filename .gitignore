@@ -1,9 +1,8 @@
-fontawesome-free-6.5.2-web
+package.json
 
-*.txt
+/fontawesome-free-6.7.2-web
 
-*.scss
+/SCSS
 
-*.css
+style.css
 
-*.json
