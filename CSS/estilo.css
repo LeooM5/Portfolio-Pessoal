@@ -60,8 +60,7 @@ html {
 
 i {
   font-size: 2.5em;
-  margin-top: 0.4em;
-  padding: 0.2em 0.5em;
+  padding: 0.5em 0.4em;
 }
 
 /* CABEÇALHO DO SITE */
@@ -258,13 +257,13 @@ header nav .links {
     width: 2em;
   }
   40% {
-    width: 11.5em;
+    width: 12em;
   }
   50% {
-    width: 11.5em;
+    width: 12em;
   }
   80% {
-    width: 11.5em;
+    width: 12em;
   }
   90% {
     width: 2em;
@@ -286,22 +285,22 @@ header nav .links {
     width: 0;
   }
   30% {
-    width: 15em;
+    width: 11.5em;
   }
   40% {
-    width: 15em;
+    width: 11.5em;
   }
   50% {
-    width: 15em;
+    width: 11.5em;
   }
   60% {
-    width: 15em;
+    width: 11.5em;
   }
   70% {
-    width: 15em;
+    width: 11.5em;
   }
   80% {
-    width: 15em;
+    width: 11.5em;
   }
   90% {
     width: 0;
@@ -396,7 +395,6 @@ header nav .links {
   font-size: 1.8em;
   border: 1px solid #7fd4f0;
   color: #0277a2;
-  padding-top: 0.7em;
   border-radius: 50%;
 }
 #Eu .contatos2 i:hover {
@@ -467,7 +465,7 @@ section {
   overflow: hidden;
   border-right: solid 3px rgba(127, 212, 240, 0.8352941176);
   transition: 0.5s ease;
-  max-width: 11.5em;
+  max-width: 12em;
   max-height: 1.5em;
   white-space: nowrap;
   animation: cursor 0.4s step-end infinite alternate, digitar 7s steps(19) infinite alternate;
