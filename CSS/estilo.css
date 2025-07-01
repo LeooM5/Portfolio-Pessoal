@@ -60,8 +60,7 @@ html {
 
 i {
   font-size: 2.5em;
-  margin-top: 0.4em;
-  padding: 0.2em 0.5em;
+  padding: 0.4em;
 }
 
 /* CABEÇALHO DO SITE */
@@ -258,13 +257,13 @@ header nav .links {
     width: 2em;
   }
   40% {
-    width: 11.5em;
+    width: 12em;
   }
   50% {
-    width: 11.5em;
+    width: 12em;
   }
   80% {
-    width: 11.5em;
+    width: 12em;
   }
   90% {
     width: 2em;
@@ -286,28 +285,51 @@ header nav .links {
     width: 0;
   }
   30% {
-    width: 15em;
+    width: 11.5em;
   }
   40% {
-    width: 15em;
+    width: 11.5em;
   }
   50% {
-    width: 15em;
+    width: 11.5em;
   }
   60% {
-    width: 15em;
+    width: 11.5em;
   }
   70% {
-    width: 15em;
+    width: 11.5em;
   }
   80% {
-    width: 15em;
+    width: 11.5em;
   }
   90% {
     width: 0;
   }
   100% {
     width: 0;
+  }
+}
+@keyframes subirEDescer {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-1em);
+  }
+}
+@keyframes moverOnda1 {
+  from {
+    transform: translateX(-300px);
+  }
+}
+@keyframes moverOnda2 {
+  from {
+    transform: translateX(250px);
+  }
+}
+@keyframes moverOnda3 {
+  from {
+    transform: translateX(-190px);
   }
 }
 /* ONDAS (2° a aparecer)*/
@@ -373,7 +395,6 @@ header nav .links {
   font-size: 1.8em;
   border: 1px solid #7fd4f0;
   color: #0277a2;
-  padding-top: 0.7em;
   border-radius: 50%;
 }
 #Eu .contatos2 i:hover {
@@ -395,8 +416,15 @@ section {
 }
 
 .ImagemEu {
-  width: 40dvw;
-  height: 80dvh;
+  width: 35dvw;
+  height: 45dvh;
+}
+.ImagemEu img {
+  width: 35em;
+  height: auto;
+  border-radius: 50%;
+  box-shadow: 0 0 2em rgba(127, 212, 240, 0.8352941176);
+  animation: subirEDescer 2s infinite alternate ease;
 }
 
 #Eu {
@@ -441,7 +469,7 @@ section {
   overflow: hidden;
   border-right: solid 3px rgba(127, 212, 240, 0.8352941176);
   transition: 0.5s ease;
-  max-width: 11.5em;
+  max-width: 12em;
   max-height: 1.5em;
   white-space: nowrap;
   animation: cursor 0.4s step-end infinite alternate, digitar 7s steps(19) infinite alternate;
@@ -449,12 +477,6 @@ section {
 .containerInfo h2 {
   font-size: 2.5em;
   color: rgba(127, 212, 240, 0.8352941176);
-}
-
-body section img {
-  height: auto;
-  width: 100dvw;
-  z-index: -1;
 }
 
 .contatos2 {
@@ -466,8 +488,50 @@ body section img {
 
 /* HABILIDADES (4° a aparecer)*/
 #Habilidades {
-  height: 100dvh;
+  height: 120dvh;
   background-color: black;
+}
+
+.Habilidades {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 70dvh;
+  width: 100dvw;
+}
+
+.Habilidades h1 {
+  color: #7fd4f0;
+  font-size: 2.5em;
+  text-align: center;
+}
+
+.ondaAzul {
+  width: 100dvw;
+  height: 14dvh;
+  display: flex;
+  align-items: flex-end;
+  background: transparent;
+}
+
+.waves2 {
+  position: absolute;
+  left: 0;
+  right: 0;
+}
+
+.waves2 .wave-1 {
+  animation: moverOnda1 3.5s ease-in-out infinite alternate;
+}
+
+.waves2 .wave-2 {
+  animation-delay: 1s;
+  animation: moverOnda2 4s ease-in-out infinite alternate;
+}
+
+.waves2 .wave-3 {
+  animation-delay: 3s;
+  animation: moverOnda3 4s ease-in-out infinite alternate;
 }
 
 /*# sourceMappingURL=estilo.css.map */

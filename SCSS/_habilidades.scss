@@ -1,4 +1,42 @@
 #Habilidades {
-    height: 100dvh;
-    background-color: black;
+  height: 120dvh;
+  background-color: black;
+}
+
+.Habilidades {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 70dvh;
+  width: 100dvw;
+}
+.Habilidades h1 {
+  color: #7fd4f0;
+  font-size: 2.5em;
+  text-align: center;
+}
+
+.ondaAzul {
+  width: 100dvw;
+  height: 14dvh;
+  display: flex;
+  align-items: flex-end;
+  background: transparent;
+}
+
+.waves2 {
+  position: absolute;
+  left: 0;
+  right: 0;
+}
+.waves2 .wave-1 {
+  animation: moverOnda1 3.5s ease-in-out infinite alternate;
+}
+.waves2 .wave-2 {
+  animation-delay: 1s;
+  animation: moverOnda2 4s ease-in-out infinite alternate;
+}
+.waves2 .wave-3 {
+  animation-delay: 3s;
+  animation: moverOnda3 4s ease-in-out infinite alternate;
 }

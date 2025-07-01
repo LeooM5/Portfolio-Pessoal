@@ -1,89 +1,94 @@
+@import "./variaveis";
+
 body {
-    min-height: 100dvh;
-    overflow-x: hidden;
+  min-height: 100dvh;
+  overflow-x: hidden;
 }
 
 section {
-    height: 100dvh;
-    width: 100dvw;
-    background: black;
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
+  height: 100dvh;
+  width: 100dvw;
+  background: black;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
 }
 
 .ImagemEu {
-    width: 40dvw;
-    height: 80dvh;
+  width: 35dvw;
+  height: 45dvh;
+
+  & img {
+    width: 35em;
+    height: auto;
+    border-radius: 50%;
+    box-shadow: 0 0 2em rgba(127, 212, 240, 0.8352941176);
+    animation: subirEDescer 2s infinite alternate ease;
+  }
 }
 
 #Eu {
-    color: white;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  height: 70dvh;
+  width: 50dvw;
+  justify-content: space-evenly;
+  margin-left: 5em;
+
+  & button {
+    width: 13em;
+    height: 4em;
+    align-self: center;
+    border: 2px solid $color-sec;
+    border-radius: 0.5em;
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+      sans-serif;
+    text-transform: uppercase;
+    padding: 0 1em;
+    cursor: pointer;
+  }
+
+  & .contatos {
+    align-self: center;
     display: flex;
-    flex-direction: column;
-    height: 70dvh;
-    width: 50dvw;
-    justify-content: space-evenly;
-    margin-left: 5em;
-
-    & button {
-        width: 13em;
-        height: 4em;
-        align-self: center;
-        border: 2px solid $color-sec;
-        border-radius: .5em;
-        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-        text-transform: uppercase;
-        padding: 0 1em;
-        cursor: pointer;
-    }
-
-    & .contatos {
-        align-self: center;
-        display: flex;
-        justify-content: space-between;
-        width: 10em;
-    }
+    justify-content: space-between;
+    width: 10em;
+  }
 }
 
 .containerInfo {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    font-family: "Copse", serif;
-    height: 30dvh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  font-family: "Copse", serif;
+  height: 30dvh;
 
-    & p {
-        text-align: justify;
-    }
+  & p {
+    text-align: justify;
+  }
 
-    & h1 {
-        font-size: 3em;
-        overflow: hidden;
-        border-right: solid 3px $color-sec;
-        transition: .5s ease;
-        max-width: 11.5em;
-        max-height: 1.5em;
-        white-space: nowrap;
-        animation: cursor .4s step-end infinite alternate,
-            digitar 7s steps(19) infinite alternate;
-    }
+  & h1 {
+    font-size: 3em;
+    overflow: hidden;
+    border-right: solid 3px $color-sec;
+    transition: 0.5s ease;
+    max-width: 12em;
+    max-height: 1.5em;
+    white-space: nowrap;
+    animation: cursor 0.4s step-end infinite alternate,
+      digitar 7s steps(19) infinite alternate;
+  }
 
-    & h2 {
-        font-size: 2.5em;
-        color: $color-sec;
-    }
-}
-
-body section img {
-    height: auto;
-    width: 100dvw;
-    z-index: -1;
+  & h2 {
+    font-size: 2.5em;
+    color: $color-sec;
+  }
 }
 
 .contatos2 {
-    display: flex;
-    justify-content: space-around;
-    width: 15em;
-    align-self: center;
+  display: flex;
+  justify-content: space-around;
+  width: 15em;
+  align-self: center;
 }
