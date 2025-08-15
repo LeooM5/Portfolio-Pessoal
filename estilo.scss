@@ -72,10 +72,10 @@ i {
 #Eu .contatos2 i {
     @include botao-e-icones-do-contatos2;
 
-    font-size: 1.8em;
+    font-size: 2em;
     border: 1px solid #7fd4f0;
-    color: #0277a2;
-    border-radius: 50%;
+    color: $color-prim;
+    border-radius: .7em;
 
     &:hover {
         background-size: 100% 100%;
