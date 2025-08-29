@@ -6,10 +6,6 @@
 
 /* GERAL */
 
-html {
-    scroll-behavior: smooth;
-}
-
 * {
     box-sizing: border-box;
     margin: 0;
@@ -17,7 +13,7 @@ html {
 }
 
 i {
-    font-size: 2.5em;
+    font-size: 2em;
     padding: .4em;
 }
 
@@ -72,7 +68,7 @@ i {
 #Eu .contatos2 i {
     @include botao-e-icones-do-contatos2;
 
-    font-size: 2em;
+    font-size: 1.7em;
     border: 1px solid #7fd4f0;
     color: $color-prim;
     border-radius: .7em;

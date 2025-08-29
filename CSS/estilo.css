@@ -43,15 +43,12 @@
   font-style: normal;
 
 */
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap");
 .logo a, .contatos a, .links a {
   transition: 0.3s ease;
 }
 
 /* GERAL */
-html {
-  scroll-behavior: smooth;
-}
-
 * {
   box-sizing: border-box;
   margin: 0;
@@ -59,7 +56,7 @@ html {
 }
 
 i {
-  font-size: 2.5em;
+  font-size: 2em;
   padding: 0.4em;
 }
 
@@ -77,20 +74,21 @@ i {
 }
 
 .contatos {
+  pointer-events: all;
   z-index: 10;
   border-radius: 1.5em;
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
   background-color: #193741;
-  height: 22em;
-  width: 5em;
+  height: 18em;
+  width: 4em;
   position: fixed;
   right: 0;
   top: 50%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: space-around;
   transform: translateY(-50%);
 }
 
@@ -112,26 +110,19 @@ header nav {
   height: 5em;
 }
 header nav img {
-  width: 100%;
-  height: 100%;
+  width: 3em;
+  height: 3em;
   border-radius: 50%;
 }
 header nav .logo {
-  width: 3dvw;
-  height: 6dvh;
   display: flex;
-  justify-content: center;
+  place-content: center;
 }
 header nav .links {
   width: 30dvw;
   display: flex;
   align-items: center;
   justify-content: space-around;
-}
-
-.logo a {
-  width: 100%;
-  height: 100%;
 }
 
 .links a {
@@ -149,7 +140,7 @@ header nav .links {
 }
 
 .contatos a:hover {
-  background-color: #7fd4f0;
+  background-color: rgba(127, 212, 240, 0.8352941176);
 }
 
 .links a::after {
@@ -257,13 +248,13 @@ header nav .links {
     width: 2em;
   }
   40% {
-    width: 11.5em;
+    width: 11.2em;
   }
   50% {
-    width: 11.5em;
+    width: 11.2em;
   }
   80% {
-    width: 11.5em;
+    width: 11.2em;
   }
   90% {
     width: 2em;
@@ -311,7 +302,7 @@ header nav .links {
 }
 @keyframes subirEDescer {
   0% {
-    transform: translateY(0);
+    transform: translateY(1em);
   }
   100% {
     transform: translateY(-1em);
@@ -330,6 +321,14 @@ header nav .links {
 @keyframes moverOnda3 {
   from {
     transform: translateX(-190px);
+  }
+}
+@keyframes subirDescer {
+  0% {
+    transform: translateY(0.1em);
+  }
+  100% {
+    transform: translateY(-0.1em);
   }
 }
 /* ONDAS (2° a aparecer)*/
@@ -392,7 +391,7 @@ header nav .links {
   background-size: 0% 100%;
   background-repeat: no-repeat;
   transition: 0.5s ease;
-  font-size: 2em;
+  font-size: 1.7em;
   border: 1px solid #7fd4f0;
   color: white;
   border-radius: 0.7em;
@@ -415,16 +414,12 @@ section {
   justify-content: space-evenly;
 }
 
-.ImagemEu {
-  width: 35dvw;
-  height: 45dvh;
-}
 .ImagemEu img {
   width: 35em;
   height: auto;
   border-radius: 50%;
   box-shadow: 0 0 2em rgba(127, 212, 240, 0.8352941176);
-  animation: subirEDescer 2s infinite alternate ease;
+  animation: subirEDescer 2s infinite alternate ease-in-out;
 }
 
 #Eu {
@@ -465,11 +460,12 @@ section {
   text-align: justify;
 }
 .containerInfo h1 {
+  font-family: "Source Sans 3", sans-serif;
   font-size: 3em;
   overflow: hidden;
   border-right: solid 3px rgba(127, 212, 240, 0.8352941176);
   transition: 0.5s ease;
-  max-width: 12em;
+  max-width: 11.2em;
   max-height: 1.5em;
   white-space: nowrap;
   animation: cursor 0.4s step-end infinite alternate, digitar 7s steps(19) infinite alternate;
@@ -487,23 +483,159 @@ section {
 }
 
 /* HABILIDADES (4° a aparecer)*/
+@keyframes animar {
+  0% {
+    transform: translateY(100dvh) scale(0.5);
+  }
+  100% {
+    transform: translateY(-8dvh) scale(1);
+  }
+}
+@keyframes onda1 {
+  0% {
+    background-position-x: 0;
+  }
+  100% {
+    background-position-x: 43em;
+  }
+}
+@keyframes onda2 {
+  0% {
+    background-position-x: 0;
+  }
+  100% {
+    background-position-x: -43em;
+  }
+}
+@keyframes fundoanimado {
+  0% {
+    background-position: 0 50%;
+  }
+  50% {
+    background-position: 100% 100%;
+  }
+  100% {
+    background-position: 0 50%;
+  }
+}
+@keyframes digitar {
+  0% {
+    width: 2em;
+  }
+  30% {
+    width: 2em;
+  }
+  40% {
+    width: 11.2em;
+  }
+  50% {
+    width: 11.2em;
+  }
+  80% {
+    width: 11.2em;
+  }
+  90% {
+    width: 2em;
+  }
+  100% {
+    width: 2em;
+  }
+}
+@keyframes cursor {
+  50% {
+    border-color: transparent;
+  }
+}
+@keyframes digitando {
+  0% {
+    width: 0;
+  }
+  20% {
+    width: 0;
+  }
+  30% {
+    width: 10.5em;
+  }
+  40% {
+    width: 10.5em;
+  }
+  50% {
+    width: 10.5em;
+  }
+  60% {
+    width: 10.5em;
+  }
+  70% {
+    width: 10.5em;
+  }
+  80% {
+    width: 10.5em;
+  }
+  90% {
+    width: 0;
+  }
+  100% {
+    width: 0;
+  }
+}
+@keyframes subirEDescer {
+  0% {
+    transform: translateY(1em);
+  }
+  100% {
+    transform: translateY(-1em);
+  }
+}
+@keyframes moverOnda1 {
+  from {
+    transform: translateX(-300px);
+  }
+}
+@keyframes moverOnda2 {
+  from {
+    transform: translateX(250px);
+  }
+}
+@keyframes moverOnda3 {
+  from {
+    transform: translateX(-190px);
+  }
+}
+@keyframes subirDescer {
+  0% {
+    transform: translateY(0.1em);
+  }
+  100% {
+    transform: translateY(-0.1em);
+  }
+}
 #Habilidades {
-  height: 120dvh;
   background-color: black;
 }
 
 .Habilidades {
+  z-index: 3;
   display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  height: 70dvh;
+  flex-wrap: wrap;
+  align-items: center;
+  align-content: center;
+  justify-content: space-evenly;
+  padding: 20em 0;
   width: 100dvw;
 }
 
 .Habilidades h1 {
-  color: #7fd4f0;
+  z-index: 2;
+  color: rgba(127, 212, 240, 0.8352941176);
   font-size: 2.5em;
   text-align: center;
+  font-family: "Source Sans 3", sans-serif;
+  width: 100dvw;
+  height: 4em;
+  filter: drop-shadow(-3px -4px 5px rgba(127, 212, 240, 0.8352941176));
+}
+.Habilidades h1 span {
+  color: white;
 }
 
 .ondaAzul {
@@ -532,6 +664,89 @@ section {
 .waves2 .wave-3 {
   animation-delay: 3s;
   animation: moverOnda3 4s ease-in-out infinite alternate;
+}
+
+.definicaoDasSkills {
+  width: 50em;
+}
+.definicaoDasSkills .html,
+.definicaoDasSkills .css,
+.definicaoDasSkills .javascript,
+.definicaoDasSkills .scss,
+.definicaoDasSkills .excel,
+.definicaoDasSkills .git {
+  display: none;
+}
+.definicaoDasSkills .html p,
+.definicaoDasSkills .css p,
+.definicaoDasSkills .javascript p,
+.definicaoDasSkills .scss p,
+.definicaoDasSkills .excel p,
+.definicaoDasSkills .git p {
+  font-family: JetBrains Mono, monospace;
+  color: white;
+  text-align: justify;
+  width: 30em;
+  font-size: 1.2em;
+}
+.definicaoDasSkills .html span,
+.definicaoDasSkills .css span,
+.definicaoDasSkills .javascript span,
+.definicaoDasSkills .scss span,
+.definicaoDasSkills .excel span,
+.definicaoDasSkills .git span {
+  font-weight: bold;
+}
+.definicaoDasSkills .html {
+  display: flex;
+}
+
+div.definicao {
+  justify-content: space-around;
+  align-items: center;
+  max-width: 50em;
+  max-height: 50em;
+}
+div.definicao i {
+  padding: 0;
+  filter: drop-shadow(-12px -2px 7px white);
+  color: rgba(127, 212, 240, 0.8352941176);
+  font-size: 8em;
+  animation: subirDescer 2s ease-in-out infinite alternate;
+}
+
+.boxSkills {
+  display: flex;
+  width: 30em;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+  color: white;
+  margin: 3em 0;
+  gap: 2em;
+}
+.boxSkills .html,
+.boxSkills .css,
+.boxSkills .javascript,
+.boxSkills .scss,
+.boxSkills .excel,
+.boxSkills .git {
+  display: flex;
+  width: 12em;
+  font-family: "Source Sans 3", sans-serif;
+  justify-content: flex-start;
+  cursor: pointer;
+  z-index: 2;
+}
+.boxSkills .html i,
+.boxSkills .css i,
+.boxSkills .javascript i,
+.boxSkills .scss i,
+.boxSkills .excel i,
+.boxSkills .git i {
+  width: 1.5em;
+  padding: 0;
+  color: rgba(127, 212, 240, 0.8352941176);
 }
 
 /*# sourceMappingURL=estilo.css.map */

@@ -1,19 +1,33 @@
+@import "./animacoes";
+
 #Habilidades {
-  height: 120dvh;
   background-color: black;
 }
 
 .Habilidades {
+  z-index: 3;
   display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  height: 70dvh;
+  flex-wrap: wrap;
+  align-items: center;
+  align-content: center;
+  justify-content: space-evenly;
+  padding: 20em 0;
   width: 100dvw;
 }
+
 .Habilidades h1 {
-  color: #7fd4f0;
+  z-index: 2;
+  color: $color-sec;
   font-size: 2.5em;
   text-align: center;
+  font-family: "Source Sans 3", sans-serif;
+  width: 100dvw;
+  height: 4em;
+  filter: drop-shadow(-3px -4px 5px $color-sec);
+
+  & span {
+    color: $color-prim;
+  }
 }
 
 .ondaAzul {
@@ -29,14 +43,96 @@
   left: 0;
   right: 0;
 }
+
 .waves2 .wave-1 {
   animation: moverOnda1 3.5s ease-in-out infinite alternate;
 }
+
 .waves2 .wave-2 {
   animation-delay: 1s;
   animation: moverOnda2 4s ease-in-out infinite alternate;
 }
+
 .waves2 .wave-3 {
   animation-delay: 3s;
   animation: moverOnda3 4s ease-in-out infinite alternate;
+}
+
+// DEFINIÇÃO DE CADA SKILL
+
+.definicaoDasSkills {
+  width: 50em;
+
+  & .html,
+  .css,
+  .javascript,
+  .scss,
+  .excel,
+  .git {
+    display: none;
+
+    & p {
+      font-family: JetBrains Mono, monospace;
+      color: white;
+      text-align: justify;
+      width: 30em;
+      font-size: 1.2em;
+    }
+
+    & span {
+      font-weight: bold;
+    }
+  }
+
+  & .html {
+    display: flex;
+  }
+}
+
+div.definicao {
+  justify-content: space-around;
+  align-items: center;
+  max-width: 50em;
+  max-height: 50em;
+
+  & i {
+    padding: 0;
+    filter: drop-shadow(-12px -2px 7px $color-prim);
+    color: $color-sec;
+    font-size: 8em;
+    animation: subirDescer 2s ease-in-out infinite alternate;
+  }
+}
+
+// BoxSkills
+
+.boxSkills {
+  display: flex;
+  width: 30em;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+  color: white;
+  margin: 3em 0;
+  gap: 2em;
+
+  & .html,
+  .css,
+  .javascript,
+  .scss,
+  .excel,
+  .git {
+    display: flex;
+    width: 12em;
+    font-family: "Source Sans 3", sans-serif;
+    justify-content: flex-start;
+    cursor: pointer;
+    z-index: 2;
+
+    & i {
+      width: 1.5em;
+      padding: 0;
+      color: $color-sec;
+    }
+  }
 }

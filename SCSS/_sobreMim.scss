@@ -1,4 +1,4 @@
-@import "./variaveis";
+@use "./variaveis" as vars;
 
 body {
   min-height: 100dvh;
@@ -15,15 +15,13 @@ section {
 }
 
 .ImagemEu {
-  width: 35dvw;
-  height: 45dvh;
 
   & img {
     width: 35em;
     height: auto;
     border-radius: 50%;
     box-shadow: 0 0 2em rgba(127, 212, 240, 0.8352941176);
-    animation: subirEDescer 2s infinite alternate ease;
+    animation: subirEDescer 2s infinite alternate ease-in-out;
   }
 }
 
@@ -69,11 +67,12 @@ section {
   }
 
   & h1 {
+    font-family: "Source Sans 3", sans-serif;
     font-size: 3em;
     overflow: hidden;
     border-right: solid 3px $color-sec;
     transition: 0.5s ease;
-    max-width: 12em;
+    max-width: 11.2em;
     max-height: 1.5em;
     white-space: nowrap;
     animation: cursor 0.4s step-end infinite alternate,

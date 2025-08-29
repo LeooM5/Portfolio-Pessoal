@@ -93,11 +93,6 @@
         <span style="--i: 15"></span>
         <span style="--i: 7"></span>
         <span style="--i: 13"></span>
-        <span style="--i: 17"></span>
-        <span style="--i: 15"></span>
-        <span style="--i: 7"></span>
-        <span style="--i: 13"></span>
-        <span style="--i: 17"></span>
       </div>
     </div>
     <div class="ondas">
@@ -153,18 +148,110 @@
           d="M0,96L48,85.3C96,75,192,53,288,85.3C384,117,480,203,576,240C672,277,768,267,864,224C960,181,1056,107,1152,85.3C1248,64,1344,96,1392,112L1440,128L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z">
         </path>
       </svg>
-      <div class="Habilidades">
-        <h1>Minhas Habilidades</h1>
+      <div data-aos="fade-right" data-aos-anchor-placement="bottom-bottom" class="Habilidades">
+        <h1>My <span>skills</span></h1>
+        <div data-aos="fade-right" data-aos-anchor-placement="bottom-bottom" class="definicaoDasSkills">
+          <div class="html definicao" data-skill="html">
+            <i class="fa-brands fa-html5"></i>
+            <p>
+              <span>HTML (HyperText Markup Language)</span> é a linguagem base utilizada para estruturar o conteúdo
+              de páginas web. Com o HTML, é possível organizar textos, imagens, links, tabelas e outros elementos,
+              formando a espinha dorsal de qualquer site. Ele define o que será exibido e como os elementos se
+              relacionam na página. Além disso, o HTML é fundamental para a acessibilidade, permitindo que pessoas com
+              deficiência naveguem e compreendam o conteúdo. É constantemente atualizado pelo W3C, trazendo novas tags e
+              recursos para acompanhar as necessidades modernas da web.
+            </p>
+          </div>
+          <div class="css definicao" data-skill="css">
+            <i class="fa-brands fa-css3-alt"></i>
+            <p>
+              <span>CSS (Cascading Style Sheets)</span> é responsável pela aparência visual das páginas web. Com o
+              CSS, você pode definir cores, fontes, tamanhos, espaçamentos, posicionamento e criar layouts responsivos,
+              tornando o site mais atraente e adaptável a diferentes dispositivos. O CSS também permite animações,
+              transições e efeitos visuais avançados, além de facilitar a separação entre estrutura e apresentação,
+              tornando o desenvolvimento mais organizado e eficiente.
+            </p>
+          </div>
+          <div class="scss definicao" data-skill="scss">
+            <i class="fa-brands fa-sass"></i>
+            <p>
+              <span>SCSS</span> é uma extensão do CSS que adiciona recursos avançados como variáveis, funções,
+              mixins e aninhamento de regras. Isso facilita a organização e manutenção do código de estilos, tornando o
+              desenvolvimento mais eficiente e produtivo. O SCSS permite reutilizar trechos de código, criar temas
+              facilmente e manter grandes projetos de forma escalável, sendo amplamente utilizado em frameworks modernos
+              como Bootstrap.
+            </p>
+          </div>
+          <div class="javascript definicao" data-skill="javascript">
+            <i class="fa-brands fa-js"></i>
+            <p>
+              <span>JavaScript</span> é uma linguagem de programação que permite adicionar interatividade, animações
+              e funcionalidades dinâmicas às páginas web. Com JavaScript, é possível validar formulários, criar menus
+              interativos, atualizar conteúdos sem recarregar a página e muito mais. É compatível com diversas
+              bibliotecas e frameworks, como React, Vue e Angular, e também pode ser usado no backend com Node.js,
+              tornando-se uma das linguagens mais versáteis e populares do mundo.
+            </p>
+          </div>
+          <div class="excel definicao" data-skill="excel">
+            <i class="fa-solid fa-file-excel"></i>
+            <p>
+              <span>Excel</span> é um software de planilhas utilizado para organizar, calcular, analisar e
+              visualizar dados. Ele oferece ferramentas para criar gráficos, tabelas dinâmicas e automatizar tarefas,
+              sendo muito útil em diversas áreas como administração, finanças e controle de projetos. O Excel também
+              suporta fórmulas avançadas, macros e integração com outras ferramentas, permitindo análises complexas e
+              relatórios personalizados para tomada de decisão.
+            </p>
+          </div>
+          <div class="git definicao" data-skill="git">
+            <i class="fa-brands fa-git-alt"></i>
+            <p>
+              <span>Git</span> é um sistema de controle de versões que permite gerenciar o histórico de alterações
+              em projetos de software. Com o Git, é possível trabalhar em equipe, criar diferentes versões do projeto,
+              recuperar arquivos antigos e colaborar de forma segura e eficiente. O Git facilita o desenvolvimento
+              distribuído, integração contínua e automação de processos, sendo essencial para projetos profissionais e
+              open source.
+            </p>
+          </div>
+        </div>
+        <div data-aos="fade-right" data-aos-anchor-placement="bottom-bottom" class="boxSkills">
+          <div class="html">
+            <i class="fa-brands fa-html5"></i>
+            <h2>HTML</h2>
+          </div>
+          <div class="css">
+            <i class="fa-brands fa-css3-alt"></i>
+            <h2>CSS</h2>
+          </div>
+          <div class="scss">
+            <i class="fa-brands fa-sass"></i>
+            <h2>SCSS</h2>
+          </div>
+          <div class="javascript">
+            <i class="fa-brands fa-js"></i>
+            <h2>JAVASCRIPT</h2>
+          </div>
+          <div class="git">
+            <i class="fa-brands fa-git-alt"></i>
+            <h2>GIT</h2>
+          </div>
+          <div class="excel">
+            <i class="fa-solid fa-file-excel"></i>
+            <h2>EXCEL</h2>
+          </div>
+        </div>
       </div>
     </div>
   </body>
 
-  <footer></footer>
+  <footer>
+    <p>&copy; Copyright 2025 | Desenvolvido por Leonardo Moura</p>
+  </footer>
 
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
   <script>
     AOS.init();
   </script>
+  <script src="./app.js"></script>
 </body>
 
 </html>
