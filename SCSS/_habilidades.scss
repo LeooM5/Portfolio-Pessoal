@@ -11,7 +11,7 @@
   align-items: center;
   align-content: center;
   justify-content: space-evenly;
-  padding: 20em 0;
+  height: 80dvh;
   width: 100dvw;
 }
 
@@ -42,6 +42,8 @@
   position: absolute;
   left: 0;
   right: 0;
+  z-index: 99;
+  pointer-events: none;
 }
 
 .waves2 .wave-1 {
@@ -67,12 +69,15 @@
   .css,
   .javascript,
   .scss,
-  .excel,
+  .nodejs,
+  .mysql,
   .git {
     display: none;
 
     & p {
-      font-family: JetBrains Mono, monospace;
+      font-family:
+        JetBrains Mono,
+        monospace;
       color: white;
       text-align: justify;
       width: 30em;
@@ -93,11 +98,11 @@ div.definicao {
   justify-content: space-around;
   align-items: center;
   max-width: 50em;
-  max-height: 50em;
+  max-height: 15em;
 
   & i {
     padding: 0;
-    filter: drop-shadow(-12px -2px 7px $color-prim);
+    filter: drop-shadow(-5px -2px 5px $color-prim);
     color: $color-sec;
     font-size: 8em;
     animation: subirDescer 2s ease-in-out infinite alternate;
@@ -115,12 +120,14 @@ div.definicao {
   color: white;
   margin: 3em 0;
   gap: 2em;
+  max-height: 15em;
 
   & .html,
   .css,
   .javascript,
   .scss,
-  .excel,
+  .nodejs,
+  .mysql,
   .git {
     display: flex;
     width: 12em;
@@ -132,6 +139,7 @@ div.definicao {
     & i {
       width: 1.5em;
       padding: 0;
+      margin-right: .5em;
       color: $color-sec;
     }
   }

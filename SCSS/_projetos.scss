@@ -1,0 +1,247 @@
+@use "./variaveis" as vars;
+
+#Projetos {
+  background-color: black;
+  width: 100dvw;
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding: 8em 0 6em;
+}
+
+// Ondas animadas no topo (mesmo sistema de .ondas do hero)
+
+.projetos-ondas {
+  width: 100dvw;
+  height: 10dvh;
+  display: flex;
+  align-items: flex-end;
+  background: transparent;
+  position: absolute;
+  top: 0;
+
+  & .wave {
+    filter: invert(55%) sepia(30%) saturate(400%) hue-rotate(170deg)
+      brightness(1.4);
+    background-image: url(../IMG/wave.png);
+    position: absolute;
+    width: 100dvw;
+    height: 6em;
+    background-size: 43em 8em;
+  }
+
+  & .wave1 {
+    z-index: 5;
+    animation: onda1 5s linear infinite;
+  }
+
+  & .wave2 {
+    z-index: 4;
+    opacity: 0.6;
+    animation: onda2 6s linear infinite;
+  }
+
+  & .wave3 {
+    z-index: 3;
+    opacity: 0.6;
+    animation: onda1 8s linear infinite;
+    animation-delay: 3s;
+  }
+
+  & .wave4 {
+    z-index: 2;
+    opacity: 0.4;
+    animation: onda2 4s linear infinite;
+    animation-delay: 3s;
+  }
+}
+
+// Título
+
+.projetos-titulo {
+  text-align: center;
+  margin-bottom: 3em;
+  z-index: 2;
+
+  & h1 {
+    font-family: "Source Sans 3", sans-serif;
+    font-size: 2.5em;
+    color: $color-sec;
+    filter: drop-shadow(-3px -4px 5px $color-sec);
+
+    & span {
+      color: $color-prim;
+    }
+  }
+
+  & p {
+    font-family: "Copse", serif;
+    color: $color-prim;
+    font-size: 1.1em;
+    margin-top: 0.5em;
+    opacity: 0.75;
+  }
+}
+
+// Grid de cards
+
+.projetos-grid {
+  z-index: 2;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  justify-content: center;
+  gap: 2.5em;
+  width: 85dvw;
+  min-height: 50dvh;
+}
+
+// Card individual
+
+.projeto-card {
+  background-color: #0d1f26;
+  border: 1px solid #1e4a5c;
+  border-radius: 0.8em;
+  width: 22em;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    border-color 0.3s ease;
+
+  &:hover {
+    transform: translateY(-0.5em);
+    border-color: $color-sec;
+    box-shadow:
+      0 0 2em rgba(127, 212, 240, 0.22),
+      0 0 0.4em rgba(127, 212, 240, 0.1);
+
+    & .projeto-card-titulo {
+      filter: drop-shadow(-2px -2px 4px $color-sec);
+    }
+  }
+}
+
+// Thumbnail
+
+.projeto-card-thumb {
+  width: 100%;
+  height: 12em;
+  overflow: hidden;
+  background-color: #0a1820;
+  position: relative;
+
+  // Overlay gradiente no fundo da thumb
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3em;
+    background: linear-gradient(to top, #0d1f26, transparent);
+    pointer-events: none;
+  }
+
+  & img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+    display: block;
+  }
+}
+
+// Corpo do card
+
+.projeto-card-corpo {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85em;
+  padding: 1.4em 1.6em 1.6em;
+  flex: 1;
+}
+
+.projeto-card-titulo {
+  font-family: "Source Sans 3", sans-serif;
+  font-size: 1.25em;
+  color: $color-sec;
+  font-weight: 700;
+  transition: filter 0.3s ease;
+}
+
+.projeto-card-descricao {
+  font-family: "Copse", serif;
+  font-size: 0.95em;
+  color: $color-prim;
+  opacity: 0.72;
+  text-align: justify;
+  line-height: 1.65;
+  flex: 1;
+}
+
+// Tags de tecnologia
+
+.projeto-card-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4em;
+  margin-top: 0.1em;
+}
+
+.projeto-tag {
+  font-family: "Nunito", sans-serif;
+  font-size: 0.7em;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: $color-sec;
+  border: 1px solid $color-sec;
+  border-radius: 2em;
+  padding: 0.2em 0.75em;
+  opacity: 0.8;
+}
+
+// Botão — mesmo padrão do .contato-btn
+
+.projeto-card-btn {
+  align-self: stretch;
+  height: 3em;
+  border: 2px solid $color-sec;
+  border-radius: 0.5em;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-size: 0.85em;
+  cursor: pointer;
+  color: $color-prim;
+  background: linear-gradient(to right, $color-sec 100%, transparent 100%);
+  background-size: 0% 100%;
+  background-repeat: no-repeat;
+  transition: 0.5s ease;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5em;
+  margin-top: 0.4em;
+
+  & i {
+    font-size: 1em;
+    padding: 0;
+    transition: color 0.5s ease;
+  }
+
+  &:hover {
+    background-size: 100% 100%;
+    color: black;
+
+    & i {
+      color: black;
+    }
+  }
+}

@@ -1,0 +1,314 @@
+@use "./variaveis" as vars;
+
+#Contato {
+  background-color: black;
+  width: 100dvw;
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding: 6em 0 4em;
+}
+
+.contato-titulo {
+  text-align: center;
+  margin-bottom: 3em;
+  z-index: 2;
+
+  & h1 {
+    font-family: "Source Sans 3", sans-serif;
+    font-size: 2.5em;
+    color: $color-sec;
+    filter: drop-shadow(-3px -4px 5px $color-sec);
+
+    & span {
+      color: $color-prim;
+    }
+  }
+
+  & p {
+    font-family: "Copse", serif;
+    color: $color-prim;
+    font-size: 1.1em;
+    margin-top: 0.5em;
+    opacity: 0.75;
+  }
+}
+
+// ---- WRAPPER CENTRAL ----
+
+.contato-wrapper {
+  z-index: 2;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 5em;
+  width: 85dvw;
+  flex-wrap: wrap;
+}
+
+// ---- INFO LADO ESQUERDO ----
+
+.contato-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+  color: $color-prim;
+  min-width: 18em;
+}
+
+.contato-info-item {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+  font-family: "Copse", serif;
+  height: 5em;
+
+  & i {
+    font-size: 2em;
+    color: $color-sec;
+    transition: 0.3s ease;
+  }
+
+  & .contato-info-texto {
+    display: flex;
+    flex-direction: column;
+
+    & span {
+      font-size: 0.85em;
+      opacity: 0.65;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    & a,
+    & p {
+      font-size: 1em;
+      color: $color-prim;
+      text-decoration: none;
+      transition: color 0.3s ease;
+
+      &:hover {
+        color: $color-sec;
+      }
+    }
+  }
+}
+
+// Redes sociais abaixo das infos
+
+.contato-redes {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1em;
+  margin-top: 1em;
+
+  & a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.8em;
+    height: 2.8em;
+    border-radius: 0.6em;
+    border: 1px solid $color-sec;
+    color: $color-prim;
+    text-decoration: none;
+    transition: 0.3s ease;
+
+    & i {
+      font-size: 1.2em;
+      padding: 0;
+      color: $color-prim;
+      transition: 0.3s ease;
+    }
+
+    &:hover {
+      background-color: $color-sec;
+      transform: scale(0.92);
+
+      & i {
+        color: black;
+      }
+    }
+  }
+}
+
+// forms
+
+.contato-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2em;
+  width: 38em;
+  max-width: 90dvw;
+
+  & .form-row {
+    display: flex;
+    gap: 1em;
+
+    & .form-group {
+      flex: 1;
+    }
+  }
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4em;
+
+  & label {
+    font-family: "Nunito", sans-serif;
+    font-size: 0.85em;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: $color-sec;
+    opacity: 0.9;
+  }
+
+  & input,
+  & textarea {
+    background-color: #0d1f26;
+    border: 1px solid #1e4a5c;
+    border-radius: 0.5em;
+    color: $color-prim;
+    font-family: "Copse", serif;
+    font-size: 1em;
+    padding: 0.75em 1em;
+    outline: none;
+    transition:
+      border-color 0.3s ease,
+      box-shadow 0.3s ease;
+    resize: none;
+
+    &::placeholder {
+      opacity: 0.35;
+      font-size: 0.9em;
+    }
+
+    &:focus {
+      border-color: $color-sec;
+      box-shadow: 0 0 0 2px rgba(127, 212, 240, 0.18);
+    }
+  }
+
+  & textarea {
+    height: 10em;
+  }
+}
+
+// Botão de enviar
+
+.contato-btn {
+  align-self: flex-end;
+  width: 13em;
+  height: 3.5em;
+  border: 2px solid $color-sec;
+  border-radius: 0.5em;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  text-transform: uppercase;
+  padding: 0 1em;
+  cursor: pointer;
+  color: $color-prim;
+  background: linear-gradient(to right, $color-sec 100%, transparent 100%);
+  background-size: 0% 100%;
+  background-repeat: no-repeat;
+  transition: 0.5s ease;
+  letter-spacing: 0.06em;
+  font-size: 0.95em;
+
+  &:hover {
+    background-size: 100% 100%;
+    color: black;
+  }
+}
+
+// ---- FEEDBACK DE ENVIO ----
+
+.contato-feedback {
+  display: none;
+  align-items: center;
+  gap: 0.5em;
+  font-family: "Copse", serif;
+  font-size: 0.95em;
+  color: $color-sec;
+  margin-top: 0.5em;
+  align-self: flex-start;
+
+  & i {
+    font-size: 1.1em;
+    padding: 0;
+  }
+
+  &.visivel {
+    display: flex;
+  }
+}
+
+.contato-onda {
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  & svg {
+    display: block;
+    width: 100%;
+  }
+}
+
+// Ondas animadas no topo do contato (mesmo sistema do hero)
+
+.contato-ondas {
+  width: 100dvw;
+  height: 10dvh;
+  display: flex;
+  align-items: flex-end;
+  background: transparent;
+  position: absolute;
+  top: 0;
+
+  & .wave {
+    filter: invert(55%) sepia(30%) saturate(400%) hue-rotate(170deg) brightness(1.4);
+    background-image: url(../IMG/wave.png);
+    position: absolute;
+    width: 100dvw;
+    height: 6em;
+    background-size: 43em 8em;
+  }
+
+  & .wave1 {
+    z-index: 5;
+    animation: onda1 5s linear infinite;
+  }
+
+  & .wave2 {
+    z-index: 4;
+    opacity: 0.6;
+    animation: onda2 6s linear infinite;
+  }
+
+  & .wave3 {
+    z-index: 3;
+    opacity: 0.6;
+    animation: onda1 8s linear infinite;
+    animation-delay: 3s;
+  }
+
+  & .wave4 {
+    z-index: 2;
+    opacity: 0.4;
+    animation: onda2 4s linear infinite;
+    animation-delay: 3s;
+  }
+}
+
+// Estado de erro no feedback
+.contato-feedback.erro {
+  color: #f07f7f;
+}

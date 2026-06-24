@@ -1,0 +1,144 @@
+@use "./variaveis" as vars;
+
+footer {
+  background-color: #050d10;
+  border-top: 1px solid #1e4a5c;
+  width: 100dvw;
+  padding: 3em 0 2em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5em;
+}
+
+// Topo — logo | links | redes
+
+.footer-topo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 85dvw;
+  flex-wrap: wrap;
+  gap: 2em;
+
+  & div {
+    width: 33%;
+  }
+}
+
+.footer-logo {
+  & img {
+    width: 2.8em;
+    height: 2.8em;
+    border-radius: 50%;
+    transition: 0.3s ease;
+
+    &:hover {
+      transform: scale(0.9);
+    }
+  }
+}
+
+.footer-links {
+  display: flex;
+  gap: 2em;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  & a {
+    font-family: "Nunito", sans-serif;
+    font-size: 0.9em;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: $color-prim;
+    text-decoration: none;
+    position: relative;
+    transition: color 0.3s ease;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      width: 100%;
+      height: 0.1em;
+      background-color: $color-sec;
+      transform: scaleX(0);
+      transition: transform 0.3s ease;
+    }
+
+    &:hover {
+      color: $color-sec;
+
+      &::after {
+        transform: scaleX(1);
+      }
+    }
+  }
+}
+
+.footer-redes {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.8em;
+
+  & a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.6em;
+    height: 2.6em;
+    border-radius: 0.6em;
+    border: 1px solid $color-sec;
+    color: $color-prim;
+    text-decoration: none;
+    transition: 0.3s ease;
+
+    & i {
+      font-size: 1.1em;
+      padding: 0;
+      transition: color 0.3s ease;
+    }
+
+    &:hover {
+      background-color: $color-sec;
+      transform: scale(0.92);
+
+      & i {
+        color: black;
+      }
+    }
+  }
+}
+
+// Divisor
+
+.footer-divisor {
+  width: 85dvw;
+  height: 1px;
+  background: linear-gradient(to right, transparent, #1e4a5c, transparent);
+}
+
+// Base
+
+.footer-base {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 85dvw;
+  flex-wrap: wrap;
+  gap: 0.5em;
+
+  & p {
+    font-family: "Copse", serif;
+    font-size: 1.2em;
+    color: $color-prim;
+    opacity: 0.5;
+    text-align: center;
+  }
+}
+
+.footer-feito span {
+  color: $color-sec;
+}
