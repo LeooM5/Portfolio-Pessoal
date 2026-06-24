@@ -459,9 +459,11 @@ section {
   align-self: center;
   border: 2px solid rgba(127, 212, 240, 0.8352941176);
   border-radius: 0.5em;
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-family: "Nunito", sans-serif;
+  font-weight: bold;
   text-transform: uppercase;
   padding: 0 1em;
+  font-size: 1em;
   cursor: pointer;
 }
 #Eu .contatos {
@@ -709,7 +711,7 @@ section {
 .definicaoDasSkills .nodejs p,
 .definicaoDasSkills .mysql p,
 .definicaoDasSkills .git p {
-  font-family: JetBrains Mono, monospace;
+  font-family: "Nunito", sans-serif;
   color: white;
   text-align: justify;
   width: 30em;
@@ -762,7 +764,7 @@ div.definicao i {
 .boxSkills .git {
   display: flex;
   width: 12em;
-  font-family: "Source Sans 3", sans-serif;
+  font-family: "Nunito", sans-serif;
   justify-content: flex-start;
   cursor: pointer;
   z-index: 2;

@@ -15,7 +15,6 @@ section {
 }
 
 .ImagemEu {
-
   & img {
     width: 35em;
     height: auto;
@@ -40,10 +39,11 @@ section {
     align-self: center;
     border: 2px solid $color-sec;
     border-radius: 0.5em;
-    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
-      sans-serif;
+    font-family: "Nunito", sans-serif;
+    font-weight: bold;
     text-transform: uppercase;
     padding: 0 1em;
+    font-size: 1em;
     cursor: pointer;
   }
 
@@ -75,7 +75,8 @@ section {
     max-width: 11.2em;
     max-height: 1.5em;
     white-space: nowrap;
-    animation: cursor 0.4s step-end infinite alternate,
+    animation:
+      cursor 0.4s step-end infinite alternate,
       digitar 7s steps(19) infinite alternate;
   }
 

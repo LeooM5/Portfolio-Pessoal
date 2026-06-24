@@ -75,9 +75,7 @@
     display: none;
 
     & p {
-      font-family:
-        JetBrains Mono,
-        monospace;
+      font-family: "Nunito", sans-serif;
       color: white;
       text-align: justify;
       width: 30em;
@@ -131,7 +129,7 @@ div.definicao {
   .git {
     display: flex;
     width: 12em;
-    font-family: "Source Sans 3", sans-serif;
+    font-family: "Nunito", sans-serif;
     justify-content: flex-start;
     cursor: pointer;
     z-index: 2;
@@ -139,7 +137,7 @@ div.definicao {
     & i {
       width: 1.5em;
       padding: 0;
-      margin-right: .5em;
+      margin-right: 0.5em;
       color: $color-sec;
     }
   }
